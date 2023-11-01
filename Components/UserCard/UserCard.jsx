@@ -8,7 +8,7 @@ export default function UserCard(props) {
          <img src={userData.avatar_url} alt="avatar" />
  
    
-         <h5> Name: {userData.username}</h5>
+         <h5> Name: {userData.name}</h5>
  
          <p> Username: {userData.login} </p>
        </div>) : 
