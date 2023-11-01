@@ -1,14 +1,21 @@
-export default function UserCard() {
+import React from "react";
+export default function UserCard(props) {
+  const {userData} = props
   return (
     <div className="user-card">
-      <div>
-        <img alt="avatar" />
-      </div>
-      <div>
-        <h5> Name:</h5>
-
-        <p> Username: </p>
-      </div>
+      {
+         userData ? ( <div>
+         <img src={userData.avatar_url} alt="avatar" />
+ 
+   
+         <h5> Name: {userData.username}</h5>
+ 
+         <p> Username: {userData.login} </p>
+       </div>) : 
+          (
+            <p>No user data to display.</p>)
+      }
+    
     </div>
   );
 }
